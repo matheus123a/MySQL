@@ -1,0 +1,37 @@
+SELECT nome,datanascimento FROM `alunos` WHERE nome like 'm%'
+
+SELECT nome,telefone FROM `alunos` WHERE month(datanascimento)='07'
+
+SELECT nome, telefone FROM `alunos` WHERE year(datanascimento)='2004'
+
+SELECT * FROM `alunos` ORDER BY turma desc
+
+SELECT titulo, autor, genero FROM `livros` WHERE genero LIKE '%Literatura%'
+
+SELECT COUNT(*) from livros
+
+SELECT titulo,autor,genero FROM `livros` WHERE autor like '%RICARDO%'
+
+SELECT * FROM `emprestimo_devolucao` WHERE month(data_emprestimo) = '10'
+
+SELECT data_emprestimo,data_devolucao,ra FROM `emprestimo_devolucao` WHERE data_emp
+restimo BETWEEN '2019-01-01' and '2020-12-31'
+
+SELECT nome, telefone, cidade FROM `bibliotecario` WHERE cidade = 'Ribeirão Pires'
+
+SELECT * FROM `bibliotecario` ORDER by nome
+
+SELECT * FROM `livros` order by gênero
+
+SELECT * FROM `livros` WHERE editora like '%Objetiva%
+
+SELECT titulo,autor,genero,paginas FROM `livros` WHERE (autor like '%Luis%' or gene
+ro like '%Fantastica%') and paginas >100
+
+SELECT Titulo,genero FROM `livros` WHERE titulo like 'M%' and genero like '%Ficção%'
+
+SELECT avg(paginas) from livros
+
+SELECT SUM(paginas) from livros
+
+SELECT titulo, autor, genero, qntd_exemplares FROM `livros` WHERE qntd_exemplares BETWEEN 4 and 6
